@@ -1,0 +1,27 @@
+{
+  "name": "capslock",
+  "version": "1.0.0",
+  "description": "This repository contains an end-to-end automation framework built with Playwright and TypeScript for testing a Capslock QA landing page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionutQAA/capslock-playwright-ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ionutQAA/capslock-playwright-ts/issues"
+  },
+  "homepage": "https://github.com/ionutQAA/capslock-playwright-ts#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
