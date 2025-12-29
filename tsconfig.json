@@ -13,5 +13,5 @@
       "@shared/*": ["src/shared/*"]
     }
   },
-  "include": ["src", "playwright.config.ts"]
+  "include": ["src", "playwright.config.ts", "src/pages/sections/.section.ts"]
 }
