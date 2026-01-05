@@ -7,7 +7,6 @@ export class HeroSection {
   readonly badgeImage: Locator;
   readonly video: Locator;
   readonly playButton: Locator;
-  readonly features: Locator;
 
   constructor(private readonly page: Page) {
     this.root = page.locator("section", {
@@ -19,6 +18,9 @@ export class HeroSection {
     this.badgeImage = this.root.locator(".hero__badgeImg img");
     this.video = this.root.locator("video.blockVideo__video");
     this.playButton = this.root.locator(".video-button button.play");
-    this.features = this.root.locator(".blockList__item");
+  }
+
+  featureItem(text: string): Locator {
+    return this.root.locator(".blockList__item", { hasText: text });
   }
 }
