@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/ionutQAA/capslock-playwright-ts#readme",
   "devDependencies": {
+    "@faker-js/faker": "^10.2.0",
     "@playwright/test": "^1.57.0",
     "@types/node": "^25.0.3",
+    "dotenv": "^17.2.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
