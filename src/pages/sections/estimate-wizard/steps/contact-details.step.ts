@@ -1,11 +1,11 @@
-import { Page, Locator } from "@playwright/test";
+import { Locator } from "@playwright/test";
 
 export class ContactDetailsStep {
-  private readonly root: Locator;
+  readonly root: Locator;
   private readonly nameInput: Locator;
-  private readonly emailInput: Locator;
+  readonly emailInput: Locator;
   private readonly goToEstimateButton: Locator;
-  private readonly errorMessage: Locator;
+  readonly nameErrorMessage: Locator;
 
   constructor(container: Locator) {
     this.root = container.locator(".steps.step-4");
@@ -13,7 +13,9 @@ export class ContactDetailsStep {
     this.nameInput = this.root.locator("[data-name-input]");
     this.emailInput = this.root.locator("input[type='email']");
     this.goToEstimateButton = this.root.locator("button[type='submit']");
-    this.errorMessage = this.root.locator("[data-error-block]");
+    this.nameErrorMessage = this.nameInput
+      .locator("xpath=ancestor::*[@data-input-wrapper]")
+      .locator("[data-error-block]");
   }
 
   async submit(name: string, email: string) {

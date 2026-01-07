@@ -1,4 +1,4 @@
-import { Page, Locator, expect } from "@playwright/test";
+import { Page, Locator } from "@playwright/test";
 
 export class ThankYouPage {
   private readonly page: Page;
@@ -15,9 +15,5 @@ export class ThankYouPage {
     this.primaryMessage = this.root.locator(".heroThankYou__txt").first();
     this.secondaryMessage = this.root.locator(".heroThankYou__txt").nth(1);
     this.logos = this.root.locator(".logoAcc__img");
-  }
-
-  async expectLoaded() {
-    await expect(this.title).toHaveText("Thank you!");
   }
 }
