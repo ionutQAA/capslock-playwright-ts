@@ -43,6 +43,6 @@ export class LandingPage {
   }
 
   async goToLandingPage() {
-    await this.page.goto("/");
+    return await this.page.goto("/");
   }
 }

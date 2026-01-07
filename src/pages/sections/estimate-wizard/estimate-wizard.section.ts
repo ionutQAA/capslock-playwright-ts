@@ -4,6 +4,7 @@ import { InterestStep } from "./steps/interest.step";
 import { PropertyTypeStep } from "./steps/property-type.step";
 import { ContactDetailsStep } from "./steps/contact-details.step";
 import { PhoneStep } from "./steps/phone.step";
+import { SorryStep } from "./steps/sorry.step";
 
 export class EstimateWizard {
   readonly root: Locator;
@@ -16,6 +17,10 @@ export class EstimateWizard {
 
   zipStep() {
     return new ZipCodeStep(this.root);
+  }
+
+  sorryStep() {
+    return new SorryStep(this.root);
   }
 
   interestStep() {
